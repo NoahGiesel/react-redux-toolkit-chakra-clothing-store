@@ -1,7 +1,7 @@
 import './App.css';
 import Navigation from "./components/Navigation"
 import ItemList from "./components/ItemList"
-import { Box, Button, HStack, Input, useNumberInput ,Image, Flex, Grid, Badge} from '@chakra-ui/react';
+import { Box, Button, HStack, Input, useNumberInput ,Image, Flex, Grid, Badge, Circle, Spacer, Tooltip} from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons'
 
 import { useSelector } from 'react-redux';
@@ -15,8 +15,8 @@ function MyInput() {
   return ( 
     <> 
       <Button w={25} onClick={() => setInputVal((e) => e += 1) } >+</Button>
-        <Input readOnly w={50} value={ inputVal} mx={2}/>
-      <Button  w={25} onClick={() => setInputVal((e) => e -= 1)}>-</Button>
+        <Input readOnly w={55} value={ inputVal} mx={2}/>
+      <Button  w={25} isDisabled={(inputVal===1)? true: false} onClick={() => setInputVal((e) => e -= 1)}>-</Button>
     </>
   )
 }
@@ -36,10 +36,11 @@ function HookUsage() {
               <Box borderRadius={15} w={350} bg="white" p={3}  my={50}  key={index}    >
                 <Image  borderRadius={10} w={350}  src={x.img} alt={x.title} />
 
-                <Box my={4} display='flex' alignItems='baseline'>
+                <Box my={4} display='flex' >
                   <Badge borderRadius='full' px='2' colorScheme='teal'>
-                    New
+                    Clothing
                   </Badge>
+                  <Spacer />
                   <Box
                     color='black.500'
                     fontWeight='semibold'
@@ -48,7 +49,9 @@ function HookUsage() {
                     textTransform='uppercase'
                     ml='2'
                   >
-                    {123} beds &bull; {2} baths
+                    <Tooltip hasArrow label={x.color} color="white" bg="grey">
+                      <Circle size='20px' mr={5} borderWidth={2} borderColor="#888" bg={x.color}/>
+                    </Tooltip>
                   </Box>
                 </Box>
                 <Grid my={4} templateColumns='1fr 1fr' gap={0} > 
@@ -76,16 +79,20 @@ function HookUsage() {
                 </Grid>
                 <Grid my={4} templateColumns='1fr 1fr' gap={0} > 
                   <Box pb={5} display='flex'  mt='2' alignItems='center'>
+                  {console.log(x.stars)}
                     {Array(5)
                       .fill('')
-                      .map((_, i) => (
+                      .map((star , i) => (
+                        
                         <StarIcon
                           key={i}
-                          color={i < 4 ? 'yellow.400' : 'grey.300'}
+                          color={ i  < x.stars? 'yellow.400' : 'grey.300'}
                         />
-                      ))}
+                           
+                      ))
+                      }
                     <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {324} reviews
+                      {x.reviews} reviews
                     </Box>
                   </Box>
                   <Button bg="green.500" color="white" w={20} ml={20}>Card</Button>      
