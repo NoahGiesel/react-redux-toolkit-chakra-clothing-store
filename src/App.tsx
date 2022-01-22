@@ -16,7 +16,8 @@ import { decrementQuantity, incrementQuantity } from './redux/items';
 
 function MyInput (props:inputProps) {
   const [inputVal , setInputVal ] = useState<number>(1);
-  // const count = useSelector((state : RootState) => state.itemList.itemList.items);
+  const count = useSelector((state : RootState) => state.itemList.itemList.values);
+  console.log(count)
   const dispatch = useDispatch();
 
   function getItem(){
@@ -25,9 +26,9 @@ function MyInput (props:inputProps) {
   }
   return ( 
     <>  
-      <Button w={25} onClick={() => dispatch(incrementQuantity(props.title)) } >+</Button>
+      <Button w={25} onClick={() => dispatch(incrementQuantity(2)) } >+</Button>
         <Input readOnly w={55} value={ inputVal} mx={2}/>
-      <Button  w={25} isDisabled={(inputVal===1)? true: false} onClick={() => dispatch(decrementQuantity(props.title))}>-</Button>
+      <Button  w={25}  onClick={() => dispatch(decrementQuantity(props.title))} isDisabled={(inputVal===1)? true: false} >-</Button>
     </>
   )
 }
@@ -37,7 +38,7 @@ function MyInput (props:inputProps) {
 
 
 function HookUsage() { 
-  const item = useSelector((state: RootState) => state.itemList.itemList.items )
+  const item = useSelector((state: RootState) => state.itemList.itemList )
   // console.log(item)
   return (
     <Box  mx={300} py={50} >
@@ -89,7 +90,6 @@ function HookUsage() {
                 </Grid>
                 <Grid my={4} templateColumns='1fr 1fr' gap={0} > 
                   <Box pb={5} display='flex'  mt='2' alignItems='center'>
-                  {console.log(x.stars)}
                     {Array(5)
                       .fill('')
                       .map((star , i) => (

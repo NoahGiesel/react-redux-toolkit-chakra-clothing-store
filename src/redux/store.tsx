@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit"
-import itemListReducer from "./items"
+import itemSlice from "./items"
 
 export default configureStore({
     reducer: {
-        itemList : itemListReducer
+        itemList : itemSlice
     }
 })
