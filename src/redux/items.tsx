@@ -11,7 +11,7 @@ const itemList  =  {
       stars: 4,
       reviews: 123,
       quantity: 1,
-      img: "https://images.pexels.com/photos/5696781/pexels-photo-5696781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img: "https://images.pexels.com/photos/4871119/pexels-photo-4871119.jpeg?cs=srgb&dl=pexels-roman-odintsov-4871119.jpg&fm=jpg"
     },
     {
       title: "Caro Shirt", 
@@ -20,7 +20,7 @@ const itemList  =  {
       stars: 5,
       reviews: 768,
       quantity: 1,
-      img:"https://images.pexels.com/photos/10397680/pexels-photo-10397680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/3026805/pexels-photo-3026805.jpeg?cs=srgb&dl=pexels-ella-olsson-3026805.jpg&fm=jpg"
     },
     {
       title: "Beige Shirt", 
@@ -29,7 +29,7 @@ const itemList  =  {
       stars: 3,
       reviews: 664,
       quantity: 1,
-      img:"https://images.pexels.com/photos/6776719/pexels-photo-6776719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?cs=srgb&dl=pexels-trang-doan-1092730.jpg&fm=jpg"
     },
     {
       title: "Bright Jacket", 
@@ -38,7 +38,7 @@ const itemList  =  {
       stars: 5,
       reviews: 324,
       quantity: 1,
-      img:"https://images.pexels.com/photos/7902302/pexels-photo-7902302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      img:"https://images.pexels.com/photos/5175606/pexels-photo-5175606.jpeg?cs=srgb&dl=pexels-shameel-mukkath-5175606.jpg&fm=jpg"
     },
     {
       title: "Dark Shirt", 
@@ -47,7 +47,7 @@ const itemList  =  {
       stars: 4,
       reviews: 443,
       quantity: 1,
-      img:"https://images.pexels.com/photos/4350287/pexels-photo-4350287.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?cs=srgb&dl=pexels-trang-doan-1132047.jpg&fm=jpg"
     },
     {
       title: "White Shirt",
@@ -56,7 +56,7 @@ const itemList  =  {
       stars: 5,
       reviews: 211,
       quantity: 1,
-      img:"https://images.pexels.com/photos/4066288/pexels-photo-4066288.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/159887/pexels-photo-159887.jpeg?cs=srgb&dl=pexels-energepiccom-159887.jpg&fm=jpg"
     },
     {
       title: "White Shirt", 
@@ -65,7 +65,7 @@ const itemList  =  {
       stars: 4,
       reviews: 175,
       quantity: 1,
-      img:"https://images.pexels.com/photos/4101142/pexels-photo-4101142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/1260591/pexels-photo-1260591.jpeg?cs=srgb&dl=pexels-the-lazy-artist-gallery-1260591.jpg&fm=jpg"
     },
     {
       title: "Orange Shirt", 
@@ -74,7 +74,7 @@ const itemList  =  {
       stars: 3,
       reviews: 129,
       quantity: 1,
-      img:"https://images.pexels.com/photos/6930504/pexels-photo-6930504.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/674689/pexels-photo-674689.jpeg?cs=srgb&dl=pexels-anastasia-zhenina-674689.jpg&fm=jpg"
     },
     {
       title: "Red Caro", 
@@ -83,7 +83,7 @@ const itemList  =  {
       stars: 4,
       reviews: 55,
       quantity: 1,
-      img:"https://images.pexels.com/photos/1933589/pexels-photo-1933589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/3026805/pexels-photo-3026805.jpeg?cs=srgb&dl=pexels-ella-olsson-3026805.jpg&fm=jpg"
     },
     {
       title: "Shirt & Jeans", 
@@ -92,7 +92,7 @@ const itemList  =  {
       stars: 5,
       reviews: 690,
       quantity: 1,
-      img:"https://images.pexels.com/photos/3702587/pexels-photo-3702587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/4561588/pexels-photo-4561588.jpeg?cs=srgb&dl=pexels-anastasia-zhenina-4561588.jpg&fm=jpg"
     },
     {
       title: "Creme Pullover", 
@@ -101,7 +101,7 @@ const itemList  =  {
       stars: 4,
       reviews: 190,
       quantity: 1,
-      img:"https://images.pexels.com/photos/6995886/pexels-photo-6995886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img:"https://images.pexels.com/photos/4117548/pexels-photo-4117548.jpeg?cs=srgb&dl=pexels-daria-shevtsova-4117548.jpg&fm=jpg"
     },
     {
       title: "Green Caro", 
@@ -110,7 +110,34 @@ const itemList  =  {
       stars: 3,
       reviews: 558,
       quantity: 1,
-      img: "https://images.pexels.com/photos/9899346/pexels-photo-9899346.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      img: "https://images.pexels.com/photos/3026805/pexels-photo-3026805.jpeg?cs=srgb&dl=pexels-ella-olsson-3026805.jpg&fm=jpg"
+    },
+    {
+      title: "Green Caro", 
+      color: "green",
+      price: 29.99,
+      stars: 3,
+      reviews: 558,
+      quantity: 1,
+      img: "https://images.pexels.com/photos/3026805/pexels-photo-3026805.jpeg?cs=srgb&dl=pexels-ella-olsson-3026805.jpg&fm=jpg"
+    },
+    {
+      title: "Green Caro", 
+      color: "green",
+      price: 29.99,
+      stars: 3,
+      reviews: 558,
+      quantity: 1,
+      img: "https://images.pexels.com/photos/3026805/pexels-photo-3026805.jpeg?cs=srgb&dl=pexels-ella-olsson-3026805.jpg&fm=jpg"
+    },
+    {
+      title: "Green Caro", 
+      color: "green",
+      price: 29.99,
+      stars: 3,
+      reviews: 558,
+      quantity: 1,
+      img: "https://images.pexels.com/photos/2874989/pexels-photo-2874989.jpeg?cs=srgb&dl=pexels-tioroshi-lazaro-2874989.jpg&fm=jpg"
     }
 ]};
 
