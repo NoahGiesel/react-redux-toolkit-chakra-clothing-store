@@ -4,19 +4,30 @@ import ItemList from "./components/ItemList"
 import { Box, Button, HStack, Input, useNumberInput ,Image, Flex, Grid, Badge, Circle, Spacer, Tooltip} from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons'
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './app/store';
 import { useState } from 'react';
+import { decrementQuantity, incrementQuantity } from './redux/items';
 
- 
+ interface inputProps {
+   title: string,
+   getTitle: Function
+ }
 
-function MyInput() {
+function MyInput (props:inputProps) {
   const [inputVal , setInputVal ] = useState<number>(1);
+  // const count = useSelector((state : RootState) => state.itemList.itemList.items);
+  const dispatch = useDispatch();
+
+  function getItem(){
+    let title = props.getTitle();
+    console.log("i got the title and it is " + title)
+  }
   return ( 
-    <> 
-      <Button w={25} onClick={() => setInputVal((e) => e += 1) } >+</Button>
+    <>  
+      <Button w={25} onClick={() => dispatch(incrementQuantity(props.title)) } >+</Button>
         <Input readOnly w={55} value={ inputVal} mx={2}/>
-      <Button  w={25} isDisabled={(inputVal===1)? true: false} onClick={() => setInputVal((e) => e -= 1)}>-</Button>
+      <Button  w={25} isDisabled={(inputVal===1)? true: false} onClick={() => dispatch(decrementQuantity(props.title))}>-</Button>
     </>
   )
 }
@@ -26,7 +37,7 @@ function MyInput() {
 
 
 function HookUsage() { 
-  const item = useSelector((state: RootState) => state.itemList.items )
+  const item = useSelector((state: RootState) => state.itemList.itemList.items )
   // console.log(item)
   return (
     <Box  mx={300} py={50} >
@@ -35,7 +46,6 @@ function HookUsage() {
             return (
               <Box borderRadius={15} w={350} bg="white" p={3}  my={50}  key={index}    >
                 <Image  borderRadius={10} w={350}  src={x.img} alt={x.title} />
-
                 <Box my={4} display='flex' >
                   <Badge borderRadius='full' px='2' colorScheme='teal'>
                     Clothing
@@ -74,7 +84,7 @@ function HookUsage() {
                     </Box>
                   </div>
                   <Box   display='flex' flexDir="row"  my={3}>
-                    <MyInput /> 
+                    <MyInput title={x.title} getTitle={() => {return x.title}} /> 
                   </Box>
                 </Grid>
                 <Grid my={4} templateColumns='1fr 1fr' gap={0} > 

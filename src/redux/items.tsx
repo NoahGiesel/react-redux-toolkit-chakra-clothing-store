@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
  
-const itemList  =  { 
+const itemList =  { 
     items:[
     { 
       title: "Red Pullover", 
@@ -145,25 +145,25 @@ const itemList  =  {
 export const itemSlice = createSlice({
 
     name: "itemList",
-    initialState :itemList,
+    initialState: {
+      itemList ,
+      totalPrice : 0
+    },
     reducers: {
         incrementQuantity : (state, { payload }) => {
-            const item = state.items.find((x) => x.title === payload.title);
-
+            const item = state.itemList.items.find((x) => x.title === payload.title);
+            console.log(item);
             if (item) {
-                item.quantity += payload.quantity;
-            } else {
-                state.items.push(payload);
-            }
+              console.log("increment by 1 "+ item.title)
+                item.quantity +=1;
+            }  
         },
         decrementQuantity : (state, { payload }) => {
-            const item = state.items.find((name) => name.title === payload.title);
+            const item = state.itemList.items.find((name) => name.title === payload.title);
 
             if (item) {
-                item.quantity -= payload.quantity;
-            } else {
-                state.items.push(payload);
-            }
+                item.quantity -= 1;
+            } 
         },
     }
 });
